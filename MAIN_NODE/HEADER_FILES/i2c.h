@@ -1,0 +1,11 @@
+void Init_I2C(void);
+void I2C_start(void);
+void I2C_restart(void);
+void I2C_write(char data);
+void I2C_stop(void);
+char read_nack(void);
+char read_mack(void);
+void MMA_write(char slaveAddr,short int wbufferAddr,char data);
+char MMA_read(char slaveAddr,short int rbufferAddr);
+void Init_accelerometer(void);
+void read_accelerometer(void);
