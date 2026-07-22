@@ -1,178 +1,249 @@
-Sure! Based on the pages you shared, here's a ready-made project file (with emojis) that you can directly use for your submission or viva.
-🚗 AutoGuard CAN: Intelligent Automotive Safety and Monitoring System
-👨‍🎓 Project Title
-AutoGuard CAN: Intelligent Automotive Safety and Monitoring System
-🎯 Aim
-To develop an intelligent automotive safety and monitoring system using Controller Area Network (CAN) communication that monitors vehicle parameters such as fuel level, accident detection, and indicator status in real time through multiple CAN-enabled nodes.
-📖 Introduction
-Modern vehicles require fast and reliable communication between different electronic control units (ECUs). This project uses the CAN protocol to exchange data between multiple nodes.
+# 🚗 AutoGuard CAN: Intelligent Automotive Safety & Monitoring System
+
+> 🚀 A CAN (Controller Area Network) based embedded system for real-time vehicle monitoring, fuel level tracking, indicator control, and accident detection using multiple LPC2129 nodes.
+
+---
+
+## 📖 Overview
+
+**AutoGuard CAN** is an intelligent automotive safety and monitoring system designed using the **Controller Area Network (CAN)** protocol. The project enables communication between multiple embedded nodes to monitor important vehicle parameters and improve vehicle safety.
+
 The system continuously monitors:
 
-⛽ Fuel Level
-🚨 Accident Detection
-💡 Indicator Status
-📊 Sensor Data
-Whenever an accident is detected using the accelerometer, the system displays Airbag Deployed status. Fuel level and indicator information are also transmitted over the CAN bus for real-time monitoring.
-🎯 Objectives
-✅ Improve vehicle safety
-✅ Monitor fuel level
+- 🚨 Accident Detection (Accelerometer)
+- ⛽ Fuel Level Monitoring
+- 💡 Indicator Control
+- 📊 Real-Time Data Display
+- 🔄 CAN-based Inter-node Communication
 
-✅ Detect accidents instantly
+When an accident is detected, the system analyzes sensor data and immediately updates the deployment status, allowing quick response and monitoring.
 
-✅ Control vehicle indicators
+---
 
-✅ Enable reliable CAN communication
+# ✨ Features
 
-🧠 Working Principle
-🟢 Main Node
-Reads accelerometer data.
-Detects accidents.
-Displays accident status on LCD.
-Receives fuel level from Fuel Node.
-Sends data over CAN Bus.
-🟡 Fuel Node
-Reads fuel sensor through ADC.
-Sends fuel percentage to Main Node using CAN.
-🔵 Indicator Node
-Receives commands from Main Node.
-Controls LEDs representing vehicle indicators.
-🏗️ Block Diagram
-Fuel Node  ----\
-                 \
-                  >---- CAN BUS ----> Main Node ----> Indicator Node
-                 /
-Accelerometer --/
+✅ Real-time Vehicle Monitoring
 
-🛠 Hardware Requirements
-🔹 LPC2129 Microcontroller
-🔹 MCP2551 CAN Transceiver
+✅ CAN Bus Communication
 
-🔹 MMA7660 Accelerometer
+✅ Fuel Level Measurement
 
-🔹 LCD (16×2)
+✅ Accident Detection using Accelerometer
 
-🔹 LEDs
+✅ Indicator Control through CAN
 
-🔹 Fuel Sensor
+✅ LCD Status Display
 
-🔹 Push Buttons / Switches
+✅ External Interrupt Handling
 
-🔹 USB to UART Converter
+✅ Multi-node Embedded Architecture
 
-🔹 Power Supply
+---
 
-💻 Software Requirements
-🖥 Keil uVision IDE
-🖥 Embedded C Programming
+# 🏗️ System Architecture
 
-🖥 Flash Magic
+The project consists of **three CAN nodes**.
 
-⚙️ Modules
-🚗 Main Node
-Reads accelerometer data.
-Detects accident.
-Displays values on LCD.
-Sends and receives CAN messages.
-⛽ Fuel Node
-Reads fuel sensor.
-Converts analog signal to digital.
-Calculates fuel percentage.
-Sends data to Main Node.
-💡 Indicator Node
-Receives CAN messages.
-Controls left and right indicator LEDs.
-🔄 Sequence of Operation
-1️⃣ Create project in Keil.
-2️⃣ Test LCD.
+### 🔹 Main Node
 
-3️⃣ Test ADC.
+- Reads Accelerometer values
+- Detects accidents
+- Displays sensor data on LCD
+- Receives fuel level information
+- Sends CAN messages to other nodes
+- Controls deployment status
 
-4️⃣ Read fuel sensor.
+### 🔹 Fuel Node
 
-5️⃣ Display fuel level.
+- Reads fuel sensor through ADC
+- Sends fuel percentage to Main Node via CAN
 
-6️⃣ Read accelerometer.
+### 🔹 Indicator Node
 
-7️⃣ Detect accident.
+- Receives CAN messages
+- Controls LED indicators
+- Displays accident indication
 
-8️⃣ Send CAN messages.
+---
 
-9️⃣ Receive CAN messages.
+# 🧩 Block Diagram
 
-🔟 Control indicators.
+```
+                +----------------------+
+                |      Main Node       |
+                |----------------------|
+                | LPC2129              |
+                | LCD                  |
+                | Accelerometer        |
+                | CAN Controller       |
+                +----------+-----------+
+                           |
+===================== CAN BUS =====================
+         |                               |
+         |                               |
++--------+---------+         +-----------+--------+
+| Indicator Node   |         | Fuel Node          |
+| LPC2129          |         | LPC2129            |
+| LEDs             |         | Fuel Sensor        |
+| CAN Controller   |         | ADC               |
++------------------+         +-------------------+
+```
 
-✨ Features
-🚗 Real-time Monitoring
-📡 CAN Communication
+---
 
-🚨 Accident Detection
+# ⚙️ Hardware Requirements
 
-⛽ Fuel Level Monitoring
+- 🖥️ LPC2129 Microcontroller
+- 🔌 MCP2551 CAN Transceiver
+- 📟 16x2 LCD
+- 💡 LEDs
+- 📈 MMA7660 Accelerometer
+- ⛽ Fuel Sensor
+- 🎛️ Switches
+- 🔄 USB to UART Converter
 
-💡 Indicator Control
+---
 
-⚡ Fast Communication
+# 💻 Software Requirements
 
-🔒 Reliable Data Transfer
+- Embedded C
+- Keil uVision
+- Flash Magic
 
-🌟 Advantages
-✅ High-speed communication
-✅ Less wiring
+---
 
-✅ Reliable network
+# 📂 Project Structure
 
-✅ Real-time data transfer
+```
+AutoGuard-CAN/
+│
+├── Main_Node/
+│   ├── main.c
+│   ├── can.c
+│   ├── lcd.c
+│   └── interrupt.c
+│
+├── Fuel_Node/
+│   ├── fuel.c
+│   └── adc.c
+│
+├── Indicator_Node/
+│   ├── indicator.c
+│   └── led.c
+│
+│
+└── README.md
+```
 
-✅ Low power consumption
+---
 
-✅ Improved vehicle safety
+# 🔄 Working Principle
 
-📌 Applications
-🚗 Smart Cars
-🚌 Public Transport
+### 🚗 Main Node
 
-🚛 Heavy Vehicles
+- Reads accelerometer continuously.
+- Detects sudden acceleration.
+- Checks accident threshold.
+- Displays values on LCD.
+- Receives fuel data from Fuel Node.
+- Sends CAN messages to Indicator Node.
 
-🚑 Ambulances
+### ⛽ Fuel Node
 
-🚓 Police Vehicles
+- Reads fuel sensor.
+- Converts analog value using ADC.
+- Sends fuel percentage over CAN.
 
-🏭 Industrial Vehicles
+### 💡 Indicator Node
 
-📈 Future Scope
-📱 IoT-based Vehicle Monitoring
-☁️ Cloud Data Storage
+- Waits for CAN message.
+- Controls LEDs.
+- Displays accident indication.
 
-📍 GPS Tracking
+---
 
-📲 Mobile Application
+# 🚀 Implementation Steps
 
-🤖 AI-based Accident Prediction
+1️⃣ Configure LPC2129 project
 
-🚘 Smart Vehicle Automation
+2️⃣ Initialize GPIO
 
-🎓 Conclusion
-The AutoGuard CAN project successfully demonstrates an intelligent automotive safety and monitoring system using the CAN protocol. It provides reliable communication between multiple nodes for monitoring fuel level, accident detection, and indicator control. The system enhances vehicle safety, improves reliability, and reduces communication delays, making it suitable for modern automotive applications.
-❓ Viva Questions
-1️⃣ What is CAN?
-Controller Area Network (CAN) is a communication protocol used for communication between Electronic Control Units (ECUs).
-2️⃣ Why is CAN used?
-Because it provides fast, reliable, and error-free communication.
-3️⃣ Which microcontroller is used?
-LPC2129.
-4️⃣ Which CAN transceiver is used?
-MCP2551.
-5️⃣ Which sensor is used for accident detection?
-MMA7660 Accelerometer.
-6️⃣ Which software is used?
-Keil uVision and Flash Magic.
-7️⃣ Which language is used?
-Embedded C.
-8️⃣ What is the purpose of the Fuel Node?
-To measure fuel level and send it to the Main Node.
-9️⃣ What happens during an accident?
-The accelerometer detects abnormal acceleration, and the Main Node displays Airbag Deployed/Safe Condition.
-🔟 What are the advantages of CAN?
-High speed, reliability, reduced wiring, and real-time communication.
-🙏 Thank You! 🌸
-Project: 🚗 AutoGuard CAN: Intelligent Automotive Safety and Monitoring System
+3️⃣ Configure ADC
+
+4️⃣ Configure LCD
+
+5️⃣ Configure CAN Controller
+
+6️⃣ Configure External Interrupts
+
+7️⃣ Read Fuel Sensor
+
+8️⃣ Read Accelerometer
+
+9️⃣ Transmit CAN Frames
+
+🔟 Receive CAN Frames
+
+1️⃣1️⃣ Display Output on LCD
+
+1️⃣2️⃣ Test complete communication
+
+---
+
+# 📷 Output
+
+The system displays:
+
+- 📊 Fuel Percentage
+- 🚨 Accident Status
+- 💡 Indicator Status
+- 📡 CAN Communication Status
+
+---
+
+# 🎯 Applications
+
+- 🚗 Smart Vehicles
+- 🚘 Automotive Safety Systems
+- 🚓 Fleet Monitoring
+- 🚙 Intelligent Transportation
+- 🚌 Vehicle Health Monitoring
+- 🛡️ Accident Alert Systems
+
+---
+
+# 🌟 Future Enhancements
+
+- 📍 GPS Integration
+- 📶 GSM Accident Alert
+- ☁️ IoT Cloud Monitoring
+- 📱 Mobile Application
+- 📡 Wireless CAN Monitoring
+- 🤖 AI-based Accident Prediction
+
+---
+
+# 🛠️ Technologies Used
+
+- Embedded C
+- LPC2129
+- CAN Protocol
+- MCP2551
+- ADC
+- GPIO
+- LCD Interface
+- Interrupt Programming
+
+---
+
+# 📚 Learning Outcomes
+
+This project provides hands-on experience in:
+
+- Embedded C Programming
+- CAN Protocol
+- ARM7 LPC2129
+- ADC Programming
+- Interrupt Handling
+- Embedded Communication
+- Sensor Interfacing
