@@ -1,0 +1,23 @@
+#define FOSC 12000000
+#define CCLK (FOSC*5)
+#define PCLK (CCLK/4)
+#define ADCCLK 3000000
+#define CLKDIV ((PCLK/ADCCLK)-1)
+#define CLKDIV_VAL (CLKDIV<<8)
+#define PDN (1<<21)
+#define START_CONV (1<<24)
+#define RESULT 6
+#define DONE_BIT 31
+#define AIN0 0x01
+#define AIN1 0x02
+#define AIN2 0x04
+#define AIN3 0x08
+#define CH0 0x01
+#define CH1 0x02
+#define CH2 0x04
+#define CH3 0x08
+//lcd defines
+#define RS 16
+#define RW 18
+#define EN 17
+#define LCD_DATA 8
