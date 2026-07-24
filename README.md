@@ -57,9 +57,9 @@ The project consists of **three CAN nodes**.
 
 ### 🧩 Block Diagram
 
-<img src="images/a_wide_high_resolution_photo_diagram_style_image.png"
-     alt="AutoGuard CAN Block Diagram"
-     width="900">
+<p align="center">
+  <img src="./images/autoguard.png" alt="AutoGuard CAN System" width="900">
+</p>
 
 ---
 
