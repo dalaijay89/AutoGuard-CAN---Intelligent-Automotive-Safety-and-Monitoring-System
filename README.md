@@ -87,26 +87,45 @@ The project consists of **three CAN nodes**.
 - Flash Magic
 
 ---
+## 📂 Project Structure
 
-# 📂 Project Structure
-
-```
+```text
 AutoGuard-CAN/
 │
 ├── Main_Node/
 │   ├── main.c
 │   ├── can.c
+│   ├── can.h
 │   ├── lcd.c
-│   └── interrupt.c
+│   ├── lcd.h
+│   ├── adc.c
+│   ├── adc.h
+│   ├── interrupt.c
+│   ├── interrupt.h
+│   ├── mma7660.c
+│   ├── mma7660.h
+│   ├── delay.c
+│   ├── delay.h
+│   ├── uart.c
+│   └── uart.h
 │
 ├── Fuel_Node/
-│   ├── fuel.c
-│   └── adc.c
+│   ├── fuel_node.c
+│   ├── can.c
+│   ├── can.h
+│   ├── adc.c
+│   ├── adc.h
+│   ├── delay.c
+│   └── delay.h
 │
 ├── Indicator_Node/
-│   ├── indicator.c
-│   └── led.c
-│
+│   ├── indicator_node.c
+│   ├── can.c
+│   ├── can.h
+│   ├── led.c
+│   ├── led.h
+│   ├── delay.c
+│   └── delay.h
 │
 └── README.md
 ```
