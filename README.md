@@ -55,39 +55,9 @@ The project consists of **three CAN nodes**.
 
 ### 🔹 Fuel Node
 
-- Reads fuel sensor through ADC
-- Sends fuel percentage to Main Node via CAN
+### 🧩 Block Diagram
 
-### 🔹 Indicator Node
-
-- Receives CAN messages
-- Controls LED indicators
-- Displays accident indication
-
----
-
-# 🧩 Block Diagram
-
-```
-                +----------------------+
-                |      Main Node       |
-                |----------------------|
-                | LPC2129              |
-                | LCD                  |
-                | Accelerometer        |
-                | CAN Controller       |
-                +----------+-----------+
-                           |
-===================== CAN BUS =====================
-         |                               |
-         |                               |
-+--------+---------+         +-----------+--------+
-| Indicator Node   |         | Fuel Node          |
-| LPC2129          |         | LPC2129            |
-| LEDs             |         | Fuel Sensor        |
-| CAN Controller   |         | ADC               |
-+------------------+         +-------------------+
-```
+https://chatgpt.com/s/m_6a63717a569081919706f3558084fea0
 
 ---
 
