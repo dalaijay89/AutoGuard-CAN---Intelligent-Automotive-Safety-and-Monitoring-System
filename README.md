@@ -56,10 +56,12 @@ The project consists of **three CAN nodes**.
 ### 🔹 Fuel Node
 
 ### 🧩 Block Diagram
+## 🧩 Block Diagram
 
 <p align="center">
-  <img src="./images/autoguard.png" alt="AutoGuard CAN System" width="900">
+  <img src="./images/autoguard.png" alt="AutoGuard CAN System" width="900"/>
 </p>
+
 
 ---
 
