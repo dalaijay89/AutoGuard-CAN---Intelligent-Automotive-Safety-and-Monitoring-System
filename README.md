@@ -90,47 +90,52 @@ The project consists of **three CAN nodes**.
 ## 📂 Project Structure
 
 ```text
-AutoGuard-CAN/
+Jay_major/
 │
 ├── Main_Node/
 │   ├── main.c
 │   ├── can.c
 │   ├── can.h
-│   ├── lcd.c
-│   ├── lcd.h
-│   ├── adc.c
-│   ├── adc.h
-│   ├── interrupt.c
-│   ├── interrupt.h
-│   ├── mma7660.c
-│   ├── mma7660.h
+│   ├── can_main.c
+│   ├── adc_main.c
+│   ├── adc_lcd.c
+│   ├── lcd_test.c
 │   ├── delay.c
 │   ├── delay.h
-│   ├── uart.c
-│   └── uart.h
+│   ├── i2c.c
+│   ├── i2c.h
+│   ├── adc_defines.h
+│   ├── adc_lcd_declaration.h
+│   ├── can_defines.h
+│   ├── declaration.h
+│   ├── defines.h
+│   ├── lcd.h
+│   └── Startup.s
 │
 ├── Fuel_Node/
-│   ├── fuel_node.c
+│   ├── fuel_adc.c
 │   ├── can.c
 │   ├── can.h
-│   ├── adc.c
-│   ├── adc.h
 │   ├── delay.c
-│   └── delay.h
+│   ├── delay.h
+│   ├── adc_defines.h
+│   ├── can_defines.h
+│   ├── lcd.h
+│   └── defines.h
 │
 ├── Indicator_Node/
-│   ├── indicator_node.c
 │   ├── can.c
 │   ├── can.h
-│   ├── led.c
-│   ├── led.h
+│   ├── can_main.c
 │   ├── delay.c
-│   └── delay.h
+│   ├── delay.h
+│   ├── can_defines.h
+│   ├── lcd.h
+│   └── defines.h
 │
 └── README.md
 ```
-
----
+___
 
 # 🔄 Working Principle
 
