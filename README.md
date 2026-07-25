@@ -194,6 +194,9 @@ ___
 
 The system displays:
 
+<img width="2540" height="833" alt="image" src="https://github.com/user-attachments/assets/5c88b454-af60-4a26-ba51-92535e1df36d" />
+
+
 - 📊 Fuel Percentage
 - 🚨 Accident Status
 - 💡 Indicator Status
