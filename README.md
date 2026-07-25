@@ -60,9 +60,8 @@ The project consists of **three CAN nodes**.
 
 ## 🧩 Block Diagram
 
-<p align="center">
-  <img src="images/block_diagram.png" alt="AutoGuard CAN System" width="900">
-</p>
+<img width="1206" height="801" alt="image" src="https://github.com/user-attachments/assets/0dc3a496-d4e7-43ce-9857-29ed052dda27" />
+
 
 
 ---
@@ -196,11 +195,25 @@ The system displays:
 
 <img width="2540" height="833" alt="image" src="https://github.com/user-attachments/assets/5c88b454-af60-4a26-ba51-92535e1df36d" />
 
+<img width="2736" height="863" alt="image" src="https://github.com/user-attachments/assets/7c62ba73-4eab-4c77-b625-6e04a911b36e" />
 
-- 📊 Fuel Percentage
-- 🚨 Accident Status
-- 💡 Indicator Status
-- 📡 CAN Communication Status
+<img width="2844" height="900" alt="image" src="https://github.com/user-attachments/assets/afb95d2d-fb3d-4fe5-a6af-3062c4bf8d37" />
+
+<img width="2229" height="739" alt="image" src="https://github.com/user-attachments/assets/143ffc4a-e887-4bed-bdbf-9bd4862d78eb" />
+
+<img width="2485" height="826" alt="image" src="https://github.com/user-attachments/assets/7c14fb8c-689c-419c-83f0-52bc8dfb8cc5" />
+
+<img width="2422" height="844" alt="image" src="https://github.com/user-attachments/assets/150e9182-e89f-4a72-aefb-d75e5f4cb62b" />
+
+<img width="5707" height="3760" alt="image" src="https://github.com/user-attachments/assets/72cfd291-3208-493c-98fb-af2b898c55c7" />
+
+
+
+
+
+
+
+
 
 ---
 
