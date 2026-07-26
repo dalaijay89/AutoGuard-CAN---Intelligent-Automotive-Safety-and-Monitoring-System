@@ -55,8 +55,12 @@ The project consists of **three CAN nodes**.
 
 ### 🔹 Fuel Node
 
-### 🧩 Block Diagram
-## 🧩 Block Diagram
+- Reads fuel sensor through ADC.
+- Sends fuel percentage to Main Node using CAN.
+
+### Indicator Node
+- Receives CAN messages.
+- Controls Left, Right, and Hazard indicators.
 
 ## 🧩 Block Diagram
 
