@@ -58,7 +58,7 @@ The project consists of **three CAN nodes**.
 - Reads fuel sensor through ADC.
 - Sends fuel percentage to Main Node using CAN.
 
-### Indicator Node
+### 🔹 Indicator Node
 - Receives CAN messages.
 - Controls Left, Right, and Hazard indicators.
 
