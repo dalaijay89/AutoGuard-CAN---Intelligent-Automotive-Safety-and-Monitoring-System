@@ -61,6 +61,8 @@ The project consists of **three CAN nodes**.
 ## 🧩 Block Diagram
 
 <img width="1206" height="801" alt="image" src="https://github.com/user-attachments/assets/0dc3a496-d4e7-43ce-9857-29ed052dda27" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/26053b32-23d0-4f64-b69a-d7b645df8f9d" />
+
 
 
 
